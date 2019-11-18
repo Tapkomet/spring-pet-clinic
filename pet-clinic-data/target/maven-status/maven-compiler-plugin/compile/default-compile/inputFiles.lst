@@ -1,5 +1,14 @@
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Vet.java
-C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Person.java
-C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\PetType.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\map\VetServiceMap.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\map\AbstractMapService.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\map\OwnerServiceMap.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\OwnerService.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\CrudService.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\BaseEntity.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\PetService.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Owner.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Person.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\map\PetServiceMap.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\PetType.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Pet.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\VetService.java
