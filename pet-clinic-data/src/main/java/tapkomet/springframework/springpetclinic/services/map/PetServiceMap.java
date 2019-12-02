@@ -1,14 +1,14 @@
 package tapkomet.springframework.springpetclinic.services.map;
 
 import tapkomet.springframework.springpetclinic.model.Pet;
-import tapkomet.springframework.springpetclinic.services.CrudService;
+import tapkomet.springframework.springpetclinic.services.PetService;
 
 import java.util.Set;
 
 /**
  * Created by Tapkomet on 11/15/2019
  */
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
