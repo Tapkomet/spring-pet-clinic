@@ -1,5 +1,6 @@
 package tapkomet.springframework.springpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import tapkomet.springframework.springpetclinic.model.Owner;
 import tapkomet.springframework.springpetclinic.services.OwnerService;
 
@@ -8,6 +9,7 @@ import java.util.Set;
 /**
  * Created by Tapkomet on 11/15/2019
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
