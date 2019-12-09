@@ -8,6 +8,7 @@ import tapkomet.springframework.springpetclinic.services.VetService;
 /**
  * Created by Tapkomet on 11/18/2019
  */
+@RequestMapping("/vets")
 @Controller
 public class VetController {
 
@@ -17,10 +18,10 @@ public class VetController {
         this.vetService = vetService;
     }
 
-    @RequestMapping({"/vets", "/vets/index", "/vets/index.html"})
+    @RequestMapping({"", "/", "/index", "/index.html"})
     public String listVets(Model model) {
 
-        model.addAttribute("model", vetService.findAll());
+        model.addAttribute("vets", vetService.findAll());
 
         return "vets/index";
     }
