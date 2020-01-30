@@ -2,6 +2,7 @@ package tapkomet.springframework.springpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import tapkomet.springframework.springpetclinic.model.Vet;
+import tapkomet.springframework.springpetclinic.services.SpecialtyService;
 import tapkomet.springframework.springpetclinic.services.VetService;
 
 import java.util.Set;
@@ -11,6 +12,13 @@ import java.util.Set;
  */
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+
+    private final SpecialtyService specialtyService;
+
+    public VetServiceMap(SpecialtyService specialtyService) {
+        this.specialtyService = specialtyService;
+    }
+
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
@@ -28,7 +36,21 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet object) {
-        return super.save(object);
+
+        if (object != null) {
+            if (object.getSpecialties() != null) {
+                object.getSpecialties().forEach(specialty -> {
+                    if (specialty.getId() == null) {
+                        //saves specialty with a generated id to persistence
+                        specialtyService.save(specialty);
+                    }
+                });
+            }
+
+            return super.save(object);
+        } else {
+            return null;
+        }
     }
 
     @Override

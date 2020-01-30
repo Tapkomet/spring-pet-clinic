@@ -6,6 +6,7 @@ tapkomet\springframework\springpetclinic\model\BaseEntity.class
 tapkomet\springframework\springpetclinic\services\map\OwnerServiceMap.class
 tapkomet\springframework\springpetclinic\services\VetService.class
 tapkomet\springframework\springpetclinic\services\map\PetServiceMap.class
+tapkomet\springframework\springpetclinic\services\SpecialtyService.class
 tapkomet\springframework\springpetclinic\model\Owner.class
 tapkomet\springframework\springpetclinic\model\Vet.class
 tapkomet\springframework\springpetclinic\services\OwnerService.class
@@ -16,3 +17,4 @@ tapkomet\springframework\springpetclinic\services\map\VetServiceMap.class
 tapkomet\springframework\springpetclinic\services\PetTypeService.class
 tapkomet\springframework\springpetclinic\model\Person.class
 tapkomet\springframework\springpetclinic\services\CrudService.class
+tapkomet\springframework\springpetclinic\services\map\SpecialtyServiceMap.class
