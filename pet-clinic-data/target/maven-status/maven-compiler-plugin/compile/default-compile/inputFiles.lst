@@ -7,8 +7,12 @@ C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\m
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\BaseEntity.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\PetService.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Owner.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Visit.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\PetTypeService.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Person.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\map\PetServiceMap.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\PetType.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Specialty.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\model\Pet.java
+C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\map\PetTypeServiceMap.java
 C:\Users\Tapkomet2\IdeaProjects\Student3\spring-pet-clinic\pet-clinic-data\src\main\java\tapkomet\springframework\springpetclinic\services\VetService.java
