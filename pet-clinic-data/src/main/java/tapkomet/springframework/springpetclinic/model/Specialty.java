@@ -1,8 +1,13 @@
 package tapkomet.springframework.springpetclinic.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * Created by Tapkomet on 1/29/2020
  */
+@Entity
+@Table(name = "specialties")
 public class Specialty extends BaseEntity {
 
     private String description;
