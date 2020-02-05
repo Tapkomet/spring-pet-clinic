@@ -1,5 +1,6 @@
 package tapkomet.springframework.springpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import tapkomet.springframework.springpetclinic.model.Specialty;
 import tapkomet.springframework.springpetclinic.services.SpecialtyService;
@@ -10,6 +11,7 @@ import java.util.Set;
  * Created by Tapkomet on 01/30/2019
  */
 @Service
+@Profile({"default", "map"})
 public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {

@@ -1,5 +1,6 @@
 package tapkomet.springframework.springpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import tapkomet.springframework.springpetclinic.model.PetType;
 import tapkomet.springframework.springpetclinic.services.PetTypeService;
@@ -10,6 +11,7 @@ import java.util.Set;
  * Created by Tapkomet on 1/29/2020
  */
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {

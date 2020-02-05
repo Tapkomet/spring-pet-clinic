@@ -1,5 +1,6 @@
 package tapkomet.springframework.springpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import tapkomet.springframework.springpetclinic.model.Owner;
 import tapkomet.springframework.springpetclinic.services.OwnerService;
@@ -12,6 +13,7 @@ import java.util.Set;
  * Created by Tapkomet on 11/15/2019
  */
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
