@@ -12,14 +12,14 @@ class OwnerMapServiceTest {
 
     private OwnerMapService ownerMapService;
 
-    final Long ownerId = 1L;
-    final String ownerLastName = "testName";
+    private final Long OWNER_ID = 1L;
+    private final String OWNER_LAST_NAME = "testName";
 
     @BeforeEach
     void setUp() {
         ownerMapService = new OwnerMapService(new PetTypeMapService(), new PetMapService());
 
-        ownerMapService.save(Owner.builder().id(ownerId).lastName(ownerLastName).build());
+        ownerMapService.save(Owner.builder().id(OWNER_ID).lastName(OWNER_LAST_NAME).build());
     }
 
     @Test
@@ -30,21 +30,21 @@ class OwnerMapServiceTest {
 
     @Test
     void deleteById() {
-        ownerMapService.deleteById(ownerId);
+        ownerMapService.deleteById(OWNER_ID);
         Set<Owner> owners = ownerMapService.findAll();
         assertEquals(0, owners.size());
     }
 
     @Test
     void delete() {
-        ownerMapService.delete(ownerMapService.findById(ownerId));
+        ownerMapService.delete(ownerMapService.findById(OWNER_ID));
         Set<Owner> owners = ownerMapService.findAll();
         assertEquals(0, owners.size());
     }
 
     @Test
     void saveWithId() {
-        Owner owner = Owner.builder().id(ownerId).lastName(ownerLastName).build();
+        Owner owner = Owner.builder().id(OWNER_ID).lastName(OWNER_LAST_NAME).build();
         Owner savedOwner = ownerMapService.save(owner);
         assertEquals(owner, savedOwner);
     }
@@ -59,15 +59,15 @@ class OwnerMapServiceTest {
 
     @Test
     void findById() {
-        Owner foundOwner = ownerMapService.findById(ownerId);
-        assertEquals(ownerId, foundOwner.getId());
+        Owner foundOwner = ownerMapService.findById(OWNER_ID);
+        assertEquals(OWNER_ID, foundOwner.getId());
 
     }
 
     @Test
     void findByLastName() {
-        Owner foundOwner = ownerMapService.findByLastName(ownerLastName);
-        assertEquals(ownerLastName, foundOwner.getLastName());
+        Owner foundOwner = ownerMapService.findByLastName(OWNER_LAST_NAME);
+        assertEquals(OWNER_LAST_NAME, foundOwner.getLastName());
     }
 
     @Test
