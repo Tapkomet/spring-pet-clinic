@@ -60,7 +60,7 @@ class OwnerControllerTest {
     void listOwnersIndex() throws Exception {
         when(ownerService.findAll()).thenReturn(owners);
         mockMvc.perform(MockMvcRequestBuilders
-                .get("/owners/index "))
+                .get("/owners/index"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("owners/index"))
                 .andExpect(model().attribute("owners", hasSize(2)));
