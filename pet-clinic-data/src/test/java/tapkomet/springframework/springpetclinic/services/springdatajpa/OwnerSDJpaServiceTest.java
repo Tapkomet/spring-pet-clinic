@@ -61,11 +61,10 @@ class OwnerSDJpaServiceTest {
 
     @Test
     void findById() {
-        //when(service.findById(anyLong())).thenReturn(testOwner);
+        //when(service.findById(anyLong())).thenReturn(Optional.of(testOwner));
+       //Owner owner = service.findById(OWNER_ID);
 
-        //Owner owner = service.findById(OWNER_ID);
-
-        //  assertEquals(testOwner, owner);
+        //assertEquals(testOwner, owner);
     }
 
 
