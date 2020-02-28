@@ -18,4 +18,8 @@ import javax.persistence.Table;
 public class PetType extends BaseEntity {
 
     private String name;
+
+    public String toString() {
+        return name;
+    }
 }
