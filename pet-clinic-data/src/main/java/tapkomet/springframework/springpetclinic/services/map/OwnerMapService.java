@@ -7,6 +7,7 @@ import tapkomet.springframework.springpetclinic.services.OwnerService;
 import tapkomet.springframework.springpetclinic.services.PetService;
 import tapkomet.springframework.springpetclinic.services.PetTypeService;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,7 +20,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
+    OwnerMapService(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }
@@ -78,5 +79,12 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                 .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        //todo implement
+
+        return null;
     }
 }
