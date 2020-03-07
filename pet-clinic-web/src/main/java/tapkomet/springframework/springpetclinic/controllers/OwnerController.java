@@ -106,6 +106,7 @@ public class OwnerController {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
         } else {
             owner.setId(ownerId);
+            System.out.println(owner);
             ownerService.save(owner);
             return "redirect:/owners/" + ownerId;
         }

@@ -29,7 +29,7 @@ public class Owner extends Person {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        this.pets = pets;
+        if (pets != null) this.pets = pets;
     }
 
     private String address;
@@ -42,5 +42,34 @@ public class Owner extends Person {
     public void addPet(Pet pet) {
         this.pets.add(pet);
         pet.setOwner(this);
+    }
+
+    public void editPet(Pet pet) {
+        pet.setOwner(this);
+        Pet petToReplace = getPet(pet.getName());
+        pets.remove(petToReplace);
+        pets.add(pet);
+    }
+
+    public Pet getPet(String name) {
+        return getPet(name, false);
+    }
+
+    public Pet getPet(String name, boolean ignoreNew) {
+        name = name.toLowerCase();
+        for (Pet pet : pets) {
+            if (!ignoreNew || !pet.isNew()) {
+                String compName = pet.getName().toLowerCase();
+                if (compName.equals(name)) {
+                    return pet;
+                }
+            }
+        }
+        return null;
+    }
+
+    public String toString() {
+        return "Owner(id=" + this.getId() + "address=" + this.getAddress() + ", city=" + this.getCity() +
+                ", telephone=" + this.getTelephone() + ", pets=" + this.getPets() + ")";
     }
 }

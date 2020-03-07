@@ -14,9 +14,18 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 public class Pet extends BaseEntity {
+
+    @Builder
+    public Pet(Long id, String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
+        super(id);
+        this.name = name;
+        this.petType = petType;
+        this.owner = owner;
+        this.birthDate = birthDate;
+        if (visits != null) this.visits = visits;
+    }
 
     private String name;
 
@@ -36,5 +45,11 @@ public class Pet extends BaseEntity {
     public void addVisit(Visit visit) {
         this.visits.add(visit);
         visit.setPet(this);
+    }
+
+    public String toString() {
+        return "Pet(id=" + this.getId() + "name=" + this.getName() + ", petType=" + this.getPetType() +
+                ", owner=" + owner.getId() +
+                ", birthDate=" + this.getBirthDate() + ", visits=" + this.getVisits() + ")";
     }
 }
