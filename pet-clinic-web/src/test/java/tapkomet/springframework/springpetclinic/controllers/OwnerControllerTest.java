@@ -34,13 +34,13 @@ class OwnerControllerTest {
     @InjectMocks
     OwnerController controller;
 
-    Set<Owner> owners;
+    private Set<Owner> owners;
 
     private final Long OWNER_ID = 1L;
     private final String OWNER_LAST_NAME = "testName";
     private final Owner testOwner = Owner.builder().id(OWNER_ID).lastName(OWNER_LAST_NAME).build();
 
-    MockMvc mockMvc;
+    private MockMvc mockMvc;
 
     @BeforeEach
     void setUp() {

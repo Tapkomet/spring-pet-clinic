@@ -1,6 +1,7 @@
 package tapkomet.springframework.springpetclinic.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
@@ -84,13 +85,14 @@ public class PetController {
     }
 
     @PostMapping("/{petId}/edit")
+    @Transactional
     public String processUpdateForm(@Valid Pet pet, BindingResult result, Owner owner, Model model) {
         if (result.hasErrors()) {
             pet.setOwner(owner);
             model.addAttribute("pet", pet);
             return VIEWS_PET_CREATE_OR_UPDATE_FORM;
         } else {
-            owner.editPet(pet);
+            owner.addPet(pet);
             System.out.println(owner);
             System.out.println(pet);
             petService.save(pet);

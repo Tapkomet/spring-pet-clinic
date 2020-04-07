@@ -42,6 +42,7 @@ class PetControllerTest {
 
     private Set<Owner> owners;
     private Set<PetType> petTypes;
+    private Set<Pet> pets;
 
     private final Long ID = 1L;
     private final Long ID2 = 2L;
@@ -66,6 +67,13 @@ class PetControllerTest {
         petTypes = new HashSet<>();
         petTypes.add(testPetType);
         petTypes.add(testPetType2);
+
+        pets = new HashSet<>();
+        pets.add(testPet);
+
+        testOwner.setPets(pets);
+        testPet.setOwner(testOwner);
+
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
 
         when(ownerService.findById(anyLong())).thenReturn(testOwner);
@@ -89,7 +97,6 @@ class PetControllerTest {
         mockMvc.perform(post("/owners/1/pets/new"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/owners/1"));
-
         verify(petService).save(any());
     }
 
@@ -103,7 +110,6 @@ class PetControllerTest {
                 .andExpect(model().attributeExists("owner"))
                 .andExpect(model().attributeExists("pet"))
                 .andExpect(model().attributeExists("types"));
-
         verifyNoMoreInteractions(petService);
     }
 
