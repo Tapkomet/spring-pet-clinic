@@ -1,6 +1,7 @@
 package tapkomet.springframework.springpetclinic.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -27,6 +28,7 @@ public class Visit extends BaseEntity {
         this.pet = pet;
     }
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
     private String description;
 
